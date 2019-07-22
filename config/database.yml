@@ -1,4 +1,4 @@
-<% project_name = 'rails-api-anna' %>
+<% project_name = 'rails-api-tasks' %>
 
 default: &default
   adapter: postgresql
