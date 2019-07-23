@@ -1,5 +1,7 @@
-class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :update, :destroy]
+# frozen_string_literal: true
+
+class TasksController < OpenReadController
+  before_action :set_task, only: %i[update destroy]
 
   # GET /tasks
   def index
@@ -10,12 +12,12 @@ class TasksController < ApplicationController
 
   # GET /tasks/1
   def show
-    render json: @task
+    render json: Task.find(params[:id])
   end
 
   # POST /tasks
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.build(task_params)
 
     if @task.save
       render json: @task, status: :created, location: @task
@@ -41,7 +43,7 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      @task = current_user.tasks.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
