@@ -1,4 +1,4 @@
-curl "http://localhost:4741/activities" \
+curl "http://localhost:4741/tasks" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
@@ -10,6 +10,8 @@ curl "http://localhost:4741/activities" \
       "status": "'"${STATUS}"'",
       "due_date": "'"${DATE}"'",
       "notes": "'"${NOTES}"'",
+      "user_id": "'"${USER}"'"
+
     }
   }'
 

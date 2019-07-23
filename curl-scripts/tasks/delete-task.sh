@@ -1,10 +1,10 @@
-curl "http://localhost:4741/activities/${ID}" \
+curl "http://localhost:4741/tasks/${ID}" \
   --include \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}" \
   --header "Content-Type: application/json" \
   --data '{
-    "activity": {
+    "task": {
       "id": "'"${ID}"'"
     }
   }'

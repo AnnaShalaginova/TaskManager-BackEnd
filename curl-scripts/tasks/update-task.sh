@@ -1,15 +1,17 @@
-curl "http://localhost:4741/update-activity/${ID}" \
+curl "http://localhost:4741/update-task/${ID}" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \
   --header "Content-Type: application/json" \
   --data '{
-    "activity": {
+    "task": {
       "id": "'"${ID}"'",
-      "sport": "'"${SPORT}"'",
-      "date": "'"${DATE}"'",
-      "duration": "'"${DURATION}"'",
-      "location": "'"${LOCATION}"'"
+      "title": "'"${TITLE}"'",
+      "description": "'"${DESCRIPTION}"'",
+      "status": "'"${STATUS}"'",
+      "due_date": "'"${DATE}"'",
+      "notes": "'"${NOTES}"'",
+      "user_id": "'"${USER}"'"
     }
   }'
 
