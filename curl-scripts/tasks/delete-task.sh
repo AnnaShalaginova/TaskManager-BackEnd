@@ -3,10 +3,5 @@ curl "http://localhost:4741/tasks/${ID}" \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}" \
   --header "Content-Type: application/json" \
-  --data '{
-    "task": {
-      "id": "'"${ID}"'"
-    }
-  }'
 
 echo
