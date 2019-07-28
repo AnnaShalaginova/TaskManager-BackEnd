@@ -41,11 +41,15 @@ https://annashalaginova.github.io/Task-Manager-FrontEnd/
 # Deployed Back-end Site
 https://fun-task-manager.herokuapp.com/
 
+Routes catalog [here](https://github.com/AnnaShalaginova/TaskManager-BackEnd/edit/master/README.md)
+
 # Technologies Used
 
 **Front End** React, JSX, Bootstrap, Javascript, CSS 
 
 **Back End** Postgres, Ruby on Rails
+
+
 
 # Planning, Process and Problem Solving
 
