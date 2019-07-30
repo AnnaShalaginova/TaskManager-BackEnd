@@ -65,4 +65,7 @@ Also, in the next post-MVP sprint, the Tasks resource will be linked to Projects
 
 # Set Up and Installation
 
-Sign up to be able to edit and update tasks.
+1. Download this repo, unzip and move to chosen repo.
+2. Move into the directory and run 'git init'. 
+3. Install dependencies with bundle install.
+4. Run the API server with bin/rails server or bundle exec rails server.
